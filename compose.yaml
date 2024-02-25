@@ -1,0 +1,9 @@
+services:
+  data:
+    image: "weatherservice"
+    ports:
+      - "3000:3000"
+  ui:
+    image: "weatherui"
+    ports:
+      - "4200:4200"
