@@ -1,0 +1,36 @@
+h2 {
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 10px;
+}
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+   border-color: black;
+}
+
+tr { 
+   display: block; float: left;
+ }
+
+th, td { 
+    display: block;
+    width: 140px;
+    text-align: center;
+    border-color: black;
+ }
+
+ .tableTemp {
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 30px;
+ }
+
+ .tableDate {
+    color: white;
+    background-color:cornflowerblue;
+    font-weight: bold;
+    font-size: 20px;
+ }

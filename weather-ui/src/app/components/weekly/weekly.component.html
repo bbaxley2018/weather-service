@@ -1,0 +1,11 @@
+<h2 *ngIf="hasTemperatureReadings"> Average 7 Day Trend</h2>
+
+<table *ngIf="hasTemperatureReadings">
+    <tr *ngFor="let temp of temperatureReadings.reverse();">
+        <td class="tableDate">{{temp.date}}</td>
+         <td class="tableTemp">
+            {{ (temperatureUnit == 'F' ? temp.temperature*(9/5)+ 32 : temp.temperature) | number: '1.0-2' }}° {{temperatureUnit}}
+        </td>
+    </tr>  
+</table>
+         

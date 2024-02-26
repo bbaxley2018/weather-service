@@ -1,0 +1,6 @@
+
+<h2>Today's Temperature: {{weatherStationId}}</h2>
+
+<div *ngIf= "hasTemperature" id="dailyTemperatureReading">{{ (temperatureUnit == 'F' ? temperatureReading.temperature*(9/5)+ 32 : temperatureReading.temperature) | number: '1.0-2'}}°
+    {{temperatureUnit}}</div>
+<div *ngIf="!hasTemperature">No daily temperature found for {{weatherStationId}}.</div>

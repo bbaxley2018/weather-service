@@ -1,0 +1,21 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<main>
+  <header>
+    <h1>Weather Station Forecast</h1>
+  </header>
+  <div class="dropdown">
+    <label for="dropdown">Station:</label>
+    <ngx-select-dropdown id="dropdown" [config]="config" [(ngModel)]="stationId" 
+      name="currentObservation" (change)="updateStationId($event.value)" [options]="stationIds" required></ngx-select-dropdown>
+    <label for="unit">Degree:</label>
+    <select id="unit" #selectUnit (change)="updateTemperatureUnit(selectUnit.value)">
+      <option default>Farenheit</option>
+      <option>Celcius</option>
+    </select>
+  </div>
+
+  <section class="content">
+      <app-daily [weatherStationId]="stationId" [temperatureUnit]="temperatureUnit"></app-daily>
+      <app-weekly [weatherStationId]="stationId"  [temperatureUnit]="temperatureUnit"></app-weekly>
+   </section>
+</main>
